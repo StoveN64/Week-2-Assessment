@@ -68,6 +68,7 @@ let canWeDeliver = (zipCode) =>{
 
 console.log(canWeDeliver(84606))
 console.log(canWeDeliver(85205))
+console.log(canWeDeliver(85203))
 console.log(`===========================================`)
 
 /* 
@@ -98,6 +99,7 @@ let canWeDeliverTwo = (zipCode) => {
 
 console.log(canWeDeliverTwo(84606))
 console.log(canWeDeliverTwo(85205))
+console.log(canWeDeliverTwo(85203))
 console.log(`===========================================`)
 
 

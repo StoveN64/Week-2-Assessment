@@ -59,6 +59,10 @@ let calcFinalPrice = (cartTotal, couponValue, tax) => {
     return (cartTotal * tax) + (cartTotal ) - couponValue
 }
 
+
+// let taxTotal = cartTotal * (1 + tax)
+// let finalTotal = taxTotal - couponValue
+// return finalTotal
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 

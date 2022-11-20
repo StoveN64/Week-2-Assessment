@@ -103,13 +103,13 @@ console.log(empTwo)
 class Manager extends Employee{
     constructor(name, shifts, employees){
         super( name, shifts)
-        this.employees = employees;
+        this.employees = [...employees];
     }
     getEmployees(){
         console.log(`${this.name} manages ${this.employees}`)
     }
     addEmployee(emp){
-        // return (this.employees).push(emp)
+        return this.employees.push(emp)
     }
 }
 
@@ -126,7 +126,7 @@ class Manager extends Employee{
 
 //CODE HERE
 
-let manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, `Cece and Schmidt`)
+let manager = new Manager(`Winston`, [`weekday mornings, weekday afternoons`], [`Cece and Schmidt`])
 
 /*
     Call the `getEmployees` method on the
@@ -142,7 +142,7 @@ manager.getEmployees()
 */
 
 //CODE HERE 
-manager.addEmployee(`Nick`)
+manager.addEmployee(`Coach`)
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -150,4 +150,4 @@ manager.addEmployee(`Nick`)
 */
 
 //CODE HERE
-// getEmployees()
+// manager.getEmployees()

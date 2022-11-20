@@ -158,10 +158,12 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(tag => {
-    return tag == `staff favorite`
+const filteredFood = foodArr.filter(food => {
+    return food.tags.includes(`staff favorite`)
 })
 
+
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -204,7 +206,23 @@ const filteredFood = foodArr.filter(tag => {
 */
 
 //CODE HERE
+// prop is a string
+// num is a comparable integer
+// Type is 'above' or 'below'
 
+let filterByProperty = (prop, num, type) => {
+    let filteredArr = foodArr.filter(food => {
+
+        if(type == 'above'){
+            return food[prop] > num
+        } else {
+            return food[prop] < num
+     }
+
+    })
+    
+    return filteredArr
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -214,3 +232,6 @@ const filteredFood = foodArr.filter(tag => {
 */
 
 //CODE HERE
+console.log(filterByProperty(`price`, 25, `above`))
+console.log(`===================================================================================`)
+console.log(filterByProperty(`price`, 20, `below`))
